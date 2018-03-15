@@ -3,3 +3,9 @@
 
 # Ignore SASS Directory
 /sass
+
+# Ignore CSS Directory
+/css
+
+# Ignore Styleguide Directory
+/styleguide
