@@ -57,12 +57,9 @@
 // -------------------------------------
 //   Front-End Dependencies
 // -------------------------------------
-// breakpoint-sass       : Really Simple Media Queries with Sass
 // kss                   : A methodology for documenting CSS and building style guides
 // node-sass             : Wrapper around libsass
 // node-sass-import-once : Custom importer for node-sass that only allows a file to be imported once
-// susy                  : Sass power-tools for web layout
-// typey                 : A complete framework for working with typography in sass
 // -------------------------------------
 
 /* global require */
@@ -225,7 +222,7 @@ require('./gulp-tasks/minify-css')(gulp, plugins, options);
 require('./gulp-tasks/serve')(gulp, plugins, options);
 require('./gulp-tasks/test-css')(gulp, plugins, options);
 require('./gulp-tasks/watch')(gulp, plugins, options);
-require('./gulp-tasks/pa11y')(gulp, plugins, options);
+// require('./gulp-tasks/pa11y')(gulp, plugins, options);
 
 // Credits:
 //
