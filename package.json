@@ -1,10 +1,10 @@
 {
-  "name": "STARTERKIT",
+  "name": "UX BuildKit",
   "version": "0.1.0",
   "description": "Front-end build tools for custom Drupal theme.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/acquia-pso/cog.git"
+    "url": "https://github.com/oomphinc/oomph-ux-buildkit.git"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -47,7 +47,7 @@
     "stylelint-no-browser-hacks": "^1.1.0",
     "stylelint-order": "^0.8.0",
     "stylelint-scss": "^2.2.0",
-    "stylelint-selector-bem-pattern": "^2.0.0",
+    "stylelint-selector-bem-pattern": "^2.0.0"
   },
   "engines": {
     "node": "8.9.x"
