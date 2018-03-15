@@ -1,0 +1,5 @@
+# Ignore Node Modules Directory
+/node_modules
+
+# Ignore SASS Directory
+/sass
