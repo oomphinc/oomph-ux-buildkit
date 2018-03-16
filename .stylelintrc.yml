@@ -35,92 +35,115 @@
     "unit-no-unknown": true,                                    # Disallow unknown units.
 
     # Limit Language Features
+    "at-rule-blacklist": ["debug"],                             # Specify a blacklist of disallowed at-rules.
+    "at-rule-no-vendor-prefix": true,                           # Disallow vendor prefixes for at-rules.
+    "at-rule-whitelist": string|[],                             # Specify a whitelist of allowed at-rules.
+    "color-named": "always-where-possible"|"never",             # Require (where possible) or disallow named colors.
+    "color-no-hex": true,                                       # Disallow hex colors.
+    "comment-word-blacklist": string|[],                        # Specify a blacklist of disallowed words within comments.
+    "custom-property-pattern": string,                          # Specify a pattern for custom properties.
+    "declaration-block-no-redundant-longhand-properties": true, # Disallow longhand properties that can be combined into one shorthand property.
+    "declaration-no-important": true,                           # Disallow !important within declarations.
+    "declaration-property-unit-blacklist": {},                  # Specify a blacklist of disallowed property and unit pairs within declarations.
+    "declaration-property-unit-whitelist": {},                  # Specify a whitelist of allowed property and unit pairs within declarations.
+    "declaration-property-value-blacklist": {},                 # Specify a blacklist of disallowed property and value pairs within declarations.
+    "declaration-property-value-whitelist": {},                 # Specify a whitelist of allowed property and value pairs within declarations.
+    "declaration-block-single-line-max-declarations": int,      # Limit the number of declaration within single line declaration blocks.
+    "function-blacklist": string|[],                            # Specify a blacklist of disallowed functions.
+    "function-url-no-scheme-relative": true,                    # Disallow scheme-relative urls.
+    "function-url-scheme-blacklist": string|[],                 # Specify a blacklist of disallowed url schemes.
+    "function-url-scheme-whitelist": string|[],                 # Specify a whitelist of allowed url schemes.
+    "function-whitelist": string|[],                            # Specify a whitelist of allowed functions.
+    "max-nesting-depth": int,                                   # Limit the depth of nesting.
+    "media-feature-name-blacklist": string|[],                  # Specify a blacklist of disallowed media feature names.
+    "media-feature-name-no-vendor-prefix": true,                # Disallow vendor prefixes for media feature names.
+    "media-feature-name-whitelist": string|[],                  # Specify a whitelist of allowed media feature names.
+    "no-unknown-animations": true,                              # Disallow unknown animations.
+    "number-max-precision": int,                                # Limit the number of decimal places allowed in numbers.
+    "property-blacklist": string|[],                            # Specify a blacklist of disallowed properties.
+    "property-no-vendor-prefix": true,                          # Disallow vendor prefixes for properties.
+    "property-whitelist": string|[],                            # Specify a whitelist of allowed properties.
+    "selector-attribute-operator-blacklist": string|[],         # Specify a blacklist of disallowed attribute operators.
+    "selector-attribute-operator-whitelist": string|[],         # Specify a whitelist of allowed attribute operators.
+    "selector-class-pattern": string,                           # Specify a pattern for class selectors.
+    "selector-combinator-blacklist": string|[],                 # Specify a blacklist of disallowed combinators.
+    "selector-combinator-whitelist": string|[],                 # Specify a whitelist of allowed combinators.
+    "selector-id-pattern": string,                              # Specify a pattern for id selectors.
+    "selector-max-attribute": int,                              # Limit the number of attribute selectors in a selector.
+    "selector-max-class": int,                                  # Limit the number of classes in a selector.
+    "selector-max-combinators": int,                            # Limit the number of combinators in a selector.
+    "selector-max-compound-selectors": int,                     # Limit the number of compound selectors in a selector.
+    "selector-max-empty-lines": int,                            # Limit the number of adjacent empty lines within selectors.
+    "selector-max-id": int,                                     # Limit the number of id selectors in a selector.
+    "selector-max-specificity": string,                         # Limit the specificity of selectors.
+    "selector-max-type": int,                                   # Limit the number of type in a selector.
+    "selector-max-universal": int,                              # Limit the number of universal selectors in a selector.
+    "selector-nested-pattern": string,                          # Specify a pattern for the selectors of rules nested within rules.
+    "selector-no-qualifying-type": true,                        # Disallow qualifying a selector by type.
+    "selector-no-vendor-prefix": true,                          # Disallow vendor prefixes for selectors.
+    "selector-pseudo-class-blacklist": string|[],               # Specify a blacklist of disallowed pseudo-class selectors.
+    "selector-pseudo-class-whitelist": string|[],               # Specify a whitelist of allowed pseudo-class selectors.
+    "selector-pseudo-element-blacklist": string|[],             # Specify a blacklist of disallowed pseudo-element selectors.
+    "selector-pseudo-element-whitelist": string|[],             # Specify a whitelist of allowed pseudo-element selectors.
+    "shorthand-property-no-redundant-values": true,             # Disallow redundant values in shorthand properties (Autofixable).
+    "time-min-milliseconds": int,                               # Specify the minimum number of milliseconds for time values.
+    "unit-blacklist": string|[],                                # Specify a blacklist of disallowed units.
+    "unit-whitelist": string|[],                                # Specify a whitelist of allowed units.
+    "value-no-vendor-prefix": true,                             # Disallow vendor prefixes for values.
+
     # Stylistic Issues
-    "at-rule-blacklist": ["debug"],
     "at-rule-empty-line-before": "always"|"never",
     "at-rule-name-case": "lower"|"upper",
     "at-rule-name-newline-after": "always"|"always-multi-line",
     "at-rule-name-space-after": "always"|"always-single-line",
-
-    "at-rule-no-vendor-prefix": true,
     "at-rule-semicolon-newline-after": "always",
     "at-rule-semicolon-space-before": "always"|"never",
-    "at-rule-whitelist": string|[],
     "block-closing-brace-empty-line-before": "always-multi-line"|"never",
     "block-closing-brace-newline-after": "always"|"always-single-line"|"never-single-line"|"always-multi-line"|"never-multi-line",
     "block-closing-brace-newline-before": "always"|"always-multi-line"|"never-multi-line",
     "block-closing-brace-space-after": "always"|"always-single-line"|"never-single-line"|"always-multi-line"|"never-multi-line",
     "block-closing-brace-space-before": "always"|"never"|"always-single-line"|"never-single-line"|"always-multi-line"|"never-multi-line",
-
     "block-opening-brace-newline-after": "always"|"always-multi-line"|"never-multi-line",
     "block-opening-brace-newline-before": "always"|"always-single-line"|"never-single-line"|"always-multi-line"|"never-multi-line",
     "block-opening-brace-space-after": "always"|"always-single-line"|"never-single-line"|"always-multi-line"|"never-multi-line",
     "block-opening-brace-space-before": "always"|"always-single-line"|"never-single-line"|"always-multi-line"|"never-multi-line",
     "color-hex-case": "lower"|"upper",
     "color-hex-length": "short"|"long",
-    "color-named": "always-where-possible"|"never",
-    "color-no-hex": true,
-
     "comment-empty-line-before": "always"|"never",
     "comment-no-empty": true,
     "comment-whitespace-inside": "always"|"never",
-    "comment-word-blacklist": string|[],
-    "custom-media-pattern": string,
     "custom-property-empty-line-before": "always"|"never",
-    "custom-property-pattern": string,
     "declaration-bang-space-after": "always"|"never",
     "declaration-bang-space-before": "always"|"never",
-
-    "declaration-block-no-redundant-longhand-properties": true,
-
     "declaration-block-semicolon-newline-after": "always"|"always-multi-line"|"never-multi-line",
     "declaration-block-semicolon-newline-before": "always"|"always-multi-line"|"never-multi-line",
     "declaration-block-semicolon-space-after": "always"|"never"|"always-single-line"|"never-single-line",
     "declaration-block-semicolon-space-before": "always"|"never"|"always-single-line"|"never-single-line",
-    "declaration-block-single-line-max-declarations": int,
     "declaration-block-trailing-semicolon": "always"|"never",
     "declaration-colon-newline-after": "always"|"always-multi-line",
     "declaration-colon-space-after": "always"|"never"|"always-single-line",
     "declaration-colon-space-before": "always"|"never",
     "declaration-empty-line-before": "always"|"never",
-    "declaration-no-important": true,
-    "declaration-property-unit-blacklist": {},
-    "declaration-property-unit-whitelist": {},
-    "declaration-property-value-blacklist": {},
-    "declaration-property-value-whitelist": {},
     "font-family-name-quotes": "always-where-required"|"always-where-recommended"|"always-unless-keyword",
-
     "font-weight-notation": "numeric"|"named",
-    "function-blacklist": string|[],
-
     "function-comma-newline-after": "always"|"always-multi-line"|"never-multi-line",
     "function-comma-newline-before": "always"|"always-multi-line"|"never-multi-line",
     "function-comma-space-after": "always"|"never"|"always-single-line"|"never-single-line",
     "function-comma-space-before": "always"|"never"|"always-single-line"|"never-single-line",
-
     "function-max-empty-lines": int,
     "function-name-case": "lower"|"upper",
     "function-parentheses-newline-inside": "always"|"always-multi-line"|"never-multi-line",
     "function-parentheses-space-inside": "always"|"never"|"always-single-line"|"never-single-line",
-    "function-url-no-scheme-relative": true,
     "function-url-quotes": "always"|"never",
-    "function-url-scheme-blacklist": string|[],
-    "function-url-scheme-whitelist": string|[],
-    "function-whitelist": string|[],
     "function-whitespace-after": "always"|"never",
     "indentation": int|"tab",
-
     "length-zero-no-unit": true,
     "max-empty-lines": int,
     "max-line-length": int,
-    "max-nesting-depth": int,
     "media-feature-colon-space-after": "always"|"never",
     "media-feature-colon-space-before": "always"|"never",
-    "media-feature-name-blacklist": string|[],
     "media-feature-name-case": "lower"|"upper",
     "media-feature-name-no-unknown": true,
-    "media-feature-name-no-vendor-prefix": true,
-    "media-feature-name-whitelist": string|[],
     "media-feature-parentheses-space-inside": "always"|"never",
     "media-feature-range-operator-space-after": "always"|"never",
     "media-feature-range-operator-space-before": "always"|"never",
@@ -128,80 +151,35 @@
     "media-query-list-comma-newline-before": "always"|"always-multi-line"|"never-multi-line",
     "media-query-list-comma-space-after": "always"|"never"|"always-single-line"|"never-single-line",
     "media-query-list-comma-space-before": "always"|"never"|"always-single-line"|"never-single-line",
-
-
-
-
-
-
-
-
-    "no-missing-end-of-source-newline": true,
-    "no-unknown-animations": true,
-    "number-leading-zero": "always"|"never",
-    "number-max-precision": int,
-    "number-no-trailing-zeros": true,
-    "property-blacklist": string|[],
-    "property-case": "lower"|"upper",
     "no-eol-whitespace": true,
-    "property-no-vendor-prefix": true,
-    "property-whitelist": string|[],
+    "no-missing-end-of-source-newline": true,
+    "number-leading-zero": "always"|"never",
+    "number-no-trailing-zeros": true,
+    "property-case": "lower"|"upper",
     "rule-empty-line-before": "always"|"never"|"always-multi-line"|"never-multi-line",
     "selector-attribute-brackets-space-inside": "always"|"never",
-    "selector-attribute-operator-blacklist": string|[],
     "selector-attribute-operator-space-after": "always"|"never",
     "selector-attribute-operator-space-before": "always"|"never",
-    "selector-attribute-operator-whitelist": string|[],
     "selector-attribute-quotes": "always"|"never",
-    "selector-class-pattern": string,
-    "selector-combinator-blacklist": string|[],
     "selector-combinator-space-after": "always"|"never",
     "selector-combinator-space-before": "always"|"never",
-    "selector-combinator-whitelist": string|[],
     "selector-descendant-combinator-no-non-space": true,
-    "selector-id-pattern": string,
     "selector-list-comma-newline-after": "always"|"always-multi-line"|"never-multi-line",
     "selector-list-comma-newline-before": "always"|"always-multi-line"|"never-multi-line",
     "selector-list-comma-space-after": "always"|"never"|"always-single-line"|"never-single-line",
     "selector-list-comma-space-before": "always"|"never"|"always-single-line"|"never-single-line",
-    "selector-max-attribute": int,
-    "selector-max-class": int,
-    "selector-max-combinators": int,
-    "selector-max-compound-selectors": int,
-    "selector-max-empty-lines": int,
-    "selector-max-id": int,
-    "selector-max-specificity": string,
-    "selector-max-type": int,
-    "selector-max-universal": int,
-    "selector-nested-pattern": string,
-    "selector-no-qualifying-type": true,
-    "selector-no-vendor-prefix": true,
-    "selector-pseudo-class-blacklist": string|[],
     "selector-pseudo-class-case": "lower"|"upper",
-
     "selector-pseudo-class-parentheses-space-inside": "always"|"never",
-    "selector-pseudo-class-whitelist": string|[],
-    "selector-pseudo-element-blacklist": string|[],
     "selector-pseudo-element-case": "lower"|"upper",
     "selector-pseudo-element-colon-notation": "single"|"double",
-
-    "selector-pseudo-element-whitelist": string|[],
     "selector-type-case": "lower"|"upper",
-
-    "shorthand-property-no-redundant-values": true,
-
     "string-quotes": "single"|"double",
-    "time-min-milliseconds": int,
-    "unit-blacklist": string|[],
     "unit-case": "lower"|"upper",
-
-    "unit-whitelist": string|[],
     "value-keyword-case": "lower"|"upper",
     "value-list-comma-newline-after": "always"|"always-multi-line"|"never-multi-line",
     "value-list-comma-newline-before": "always"|"always-multi-line"|"never-multi-line",
     "value-list-comma-space-after": "always"|"never"|"always-single-line"|"never-single-line",
     "value-list-comma-space-before": "always"|"never"|"always-single-line"|"never-single-line",
-    "value-list-max-empty-lines": int,
-    "value-no-vendor-prefix": true
+    "value-list-max-empty-lines": int
   },
 }
