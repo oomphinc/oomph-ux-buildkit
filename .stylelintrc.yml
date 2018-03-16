@@ -9,12 +9,12 @@
   ],
   "rules": {
     # Possible Errors
-    "at-rule-no-unknown": true,                                 # Disallow unknown at-rules.
+    "at-rule-no-unknown": null,                                 # Disallow unknown at-rules.
     "block-no-empty": true,                                     # Disallow empty blocks.
     "color-no-invalid-hex": true,                               # Disallow invalid hex colors.
-    "comment-no-empty": true,                                   # Disallow empty comments.
-    "declaration-block-no-duplicate-properties": true,          # Disallow duplicate properties within declaration blocks.
-    "declaration-block-no-shorthand-property-overrides": true,  # Disallow shorthand properties that override related longhand properties within declaration blocks.
+    #"comment-no-empty": true,                                   # Disallow empty comments.
+    #"declaration-block-no-duplicate-properties": true,          # Disallow duplicate properties within declaration blocks.
+    #"declaration-block-no-shorthand-property-overrides": true,  # Disallow shorthand properties that override related longhand properties within declaration blocks.
     "font-family-no-duplicate-names": true,                     # Disallow duplicate font family names.
     "font-family-no-missing-generic-family-keyword": true,      # Disallow missing generic families in lists of font family names.
     "function-calc-no-unspaced-operator": true,                 # Disallow an unspaced operator within calc() functions.
