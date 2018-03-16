@@ -40,14 +40,12 @@
     "pa11y": "beta",
     "run-sequence": "^2.2.0",
     "stylelint": "^8.4.0",
-    "stylelint-config-get-off-my-lawn": "^2.0.0",
     "stylelint-config-recommended-scss": "^3.0.0",
-    "stylelint-config-sass-guidelines": "^4.0.1",
-    "stylelint-config-standard": "^18.0.0",
     "stylelint-no-browser-hacks": "^1.1.0",
-    "stylelint-order": "^0.8.0",
+    "stylelint-selector-bem-pattern": "^2.0.0",
+    "stylelint-config-sass-guidelines": "^4.0.1",
     "stylelint-scss": "^2.2.0",
-    "stylelint-selector-bem-pattern": "^2.0.0"
+    "stylelint-order": "^0.8.0"
   },
   "engines": {
     "node": "8.9.x"
