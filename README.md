@@ -28,5 +28,10 @@ best on the vest practices and the viability of our code but reviewers should no
 have to worry about the granular details of things like indentation - this is
 what linters are for!
 
+## Roadmap
+* sass doc - all our stuff should be formated to create auto documentation
+* kss - living styleguide builder
+* lighthouse - automated performance testing
+
 ## Issues
 https://thinkoomph.jira.com/projects/OUXE
