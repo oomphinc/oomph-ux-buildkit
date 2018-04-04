@@ -8,6 +8,13 @@ All tests are run on the precommit hook but can be overidden using a --novery fl
 * Node 8.9+
 
 ## Tools
+### Stylelint
+under the hood for scss testing we use stylelint, styles are broken up into 3
+major categories:
+* Possible Errors,
+* Limit Language Features
+* Stylistic Issues
+more can be found here: stylelint link.
 
 ## Linting
 Linting tests can be run using NPM Scripts. If you are not fimialr with this
@@ -29,6 +36,7 @@ have to worry about the granular details of things like indentation - this is
 what linters are for!
 
 ## Roadmap
+* accessibility testing
 * sass doc - all our stuff should be formated to create auto documentation
 * kss - living styleguide builder
 * lighthouse - automated performance testing

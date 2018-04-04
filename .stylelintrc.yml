@@ -1,6 +1,6 @@
-# Oomph default confog file
+# Oomph default config file
 # The main focus here is readability & consistency
-# most rules domnt matter too much.
+# most rules dont matter too much.
 
 {
   "extends": [
