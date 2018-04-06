@@ -6,7 +6,6 @@
 //
 // Available tasks:
 //   `gulp`
-//   'gulp browser-sync'
 //   `gulp build`
 //   `gulp build:dev`
 //   `gulp clean`
@@ -21,7 +20,6 @@
 //   `gulp watch`
 //   `gulp watch:js`
 //   `gulp watch:sass`
-//   `gulp watch:styleguide`
 //
 // -------------------------------------
 
@@ -45,7 +43,6 @@
 // gulp-uglify       : Minify JavaScript with UglifyJS
 // gulp-util         : Utility functions
 // gulp-watch        : Watch stream
-// browser-sync      : Device and browser testing tool
 // del               : delete
 // eslint            : JavaScript code quality tool
 // run-sequence      : Run a series of dependent Gulp tasks in order
@@ -89,25 +86,11 @@ var paths = {
     source: 'js/src',
     destination: 'js/dist'
   },
-  images: 'img/',
-  styleGuide: 'styleguide'
+  images: 'img/'
 };
 
 // These are passed to each task.
 var options = {
-
-  // ----- Browsersync ----- //
-
-  browserSync: {
-    // Put your local site URL here to prevent Browsersync
-    // from prompting you to add additional scripts to your page.
-    // proxy: {
-    //   target: 'http://local.example.com'
-    // },
-    open: 'external',
-    xip: true,
-    logConnections: true
-  },
 
   // ----- CSS ----- //
 
@@ -154,8 +137,7 @@ var options = {
   pa11y: {
     urls: [ // An array of urls to test.
       // For testing in a travis environment:
-      // 'http://127.0.0.1:8888',
-      // 'http://127.0.0.1:8888/themes/custom/yourtheme/styleguide'
+      // 'http://127.0.0.1:8888'
     ],
     failOnError: true, // fail the build on error
     showFailedOnly: true, // show errors only and override reporter
@@ -185,7 +167,6 @@ var options = {
 };
 
 // Tasks
-require('./gulp-tasks/browser-sync')(gulp, plugins, options);
 require('./gulp-tasks/build')(gulp, plugins, options);
 require('./gulp-tasks/clean')(gulp, plugins, options);
 require('./gulp-tasks/clean-css')(gulp, plugins, options);
