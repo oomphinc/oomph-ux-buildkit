@@ -12,8 +12,7 @@ module.exports = function (gulp, plugins, options) {
   gulp.task('build', function(cb) {
     plugins.runSequence(
       'compile:sass',
-      ['minify:css',
-        'compile:styleguide'],
+      ['minify:css'],
       ['lint:js-gulp',
         'lint:js-with-fail',
         'lint:css-with-fail'],
@@ -23,8 +22,7 @@ module.exports = function (gulp, plugins, options) {
   gulp.task('build:dev', function(cb) {
     plugins.runSequence(
       'compile:sass',
-      ['minify:css',
-        'compile:styleguide'],
+      ['minify:css'],
       ['lint:js-gulp',
         'lint:js',
         'lint:css'],

@@ -117,7 +117,6 @@ var options = {
 
   css: {
     files: path.join(paths.styles.destination, '**/*.css'),
-    file: path.join(paths.styles.destination, '/styles.css'),
     destination: path.join(paths.styles.destination)
   },
 
@@ -125,7 +124,6 @@ var options = {
 
   sass: {
     files: path.join(paths.styles.source, '**/*.scss'),
-    file: path.join(paths.styles.source, 'styles.scss'),
     destination: path.join(paths.styles.destination)
   },
 
