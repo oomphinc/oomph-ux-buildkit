@@ -25,7 +25,8 @@ module.exports = function (gulp, plugins, options) {
       ['minify:css'],
       ['lint:js-gulp',
         'lint:js',
-        'lint:css'],
+        'lint:css',
+        'test:pa11y'],
       cb);
   });
 };
