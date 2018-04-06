@@ -11,9 +11,7 @@
 //   `gulp build:dev`
 //   `gulp clean`
 //   `gulp clean:css`
-//   `gulp clean:styleguide`
 //   `gulp compile:sass`
-//   `gulp compile:styleguide`
 //   `gulp lint:js`
 //   `gulp lint:css`
 //   `gulp minify:css`
@@ -50,14 +48,12 @@
 // browser-sync      : Device and browser testing tool
 // del               : delete
 // eslint            : JavaScript code quality tool
-// kss               : Living Style Guide Generator
 // run-sequence      : Run a series of dependent Gulp tasks in order
 // -------------------------------------
 
 // -------------------------------------
 //   Front-End Dependencies
 // -------------------------------------
-// kss                   : A methodology for documenting CSS and building style guides
 // node-sass             : Wrapper around libsass
 // node-sass-import-once : Custom importer for node-sass that only allows a file to be imported once
 // -------------------------------------
@@ -154,22 +150,6 @@ var options = {
 
   },
 
-  // ----- KSS Node ----- //
-  styleGuide: {
-    source: [
-      paths.styles.source
-    ],
-    builder: 'builder/twig',
-    destination: 'styleguide/',
-    css: [
-      path.relative(paths.styleGuide, paths.styles.destination + 'styles.css'),
-      path.relative(paths.styleGuide, paths.styles.destination + 'style-guide-only/kss-only.css')
-    ],
-    js: [],
-    homepage: 'style-guide-only/homepage.md',
-    title: 'Living Style Guide'
-  },
-
   // ------ pa11y ----- //
   pa11y: {
     urls: [ // An array of urls to test.
@@ -209,10 +189,8 @@ require('./gulp-tasks/browser-sync')(gulp, plugins, options);
 require('./gulp-tasks/build')(gulp, plugins, options);
 require('./gulp-tasks/clean')(gulp, plugins, options);
 require('./gulp-tasks/clean-css')(gulp, plugins, options);
-require('./gulp-tasks/clean-styleguide')(gulp, plugins, options);
 require('./gulp-tasks/compile-sass')(gulp, plugins, options);
 require('./gulp-tasks/compile-js')(gulp, plugins, options);
-require('./gulp-tasks/compile-styleguide')(gulp, plugins, options);
 require('./gulp-tasks/default')(gulp, plugins, options);
 require('./gulp-tasks/lint-js')(gulp, plugins, options);
 require('./gulp-tasks/lint-css')(gulp, plugins, options);
