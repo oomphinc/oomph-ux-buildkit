@@ -2,10 +2,15 @@
 The buildkit is platform idependant, we should be able to include it on all our
 Drupal and WordPress projects.
 
-All tests are run on the precommit hook but can be overidden using a --novery flag
+All tests are run on the precommit hook but can be overidden using a --noverify flag (not yet)
 
 ## Requirements
 * Node 8.9+
+check out nvm...
+for accessibility testing tht needs some configuartion and added to a task,
+or can be added as a seperate task
+gulp buld tasks vs lint/test tasks
+add copy tasks
 
 ## Tools
 ### Stylelint
@@ -40,6 +45,13 @@ what linters are for!
 * sass doc - all our stuff should be formated to create auto documentation
 * kss - living styleguide builder
 * lighthouse - automated performance testing
+* basic html/css testing (browser compat)
+* precommit testings
+* add travis
+
+https://www.npmjs.com/package/pre-commit
+https://www.npmjs.com/package/pre-push
+https://www.npmjs.com/package/copy
 
 ## Issues
 https://thinkoomph.jira.com/projects/OUXE
