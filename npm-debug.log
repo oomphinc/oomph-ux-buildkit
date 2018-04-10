@@ -1,0 +1,151 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@3.10.10
+3 info using node@v6.10.3
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/johncionci/Sites/oomph-ux-buildkit',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/johncionci/.npm/ux-buildKit/0.1.0/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/johncionci/.npm correctMkdir not in flight; initializing
+10 info lifecycle ux-buildKit@0.1.0~prepublish: ux-buildKit@0.1.0
+11 silly lifecycle ux-buildKit@0.1.0~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/Users/johncionci/.npm/ux-buildKit/0.1.0/package.tgz',
+12 verbose tar pack   '/Users/johncionci/Sites/oomph-ux-buildkit' ]
+13 verbose tarball /Users/johncionci/.npm/ux-buildKit/0.1.0/package.tgz
+14 verbose folder /Users/johncionci/Sites/oomph-ux-buildkit
+15 verbose addLocalTarball adding from inside cache /Users/johncionci/.npm/ux-buildKit/0.1.0/package.tgz
+16 verbose correctMkdir /Users/johncionci/.npm correctMkdir not in flight; initializing
+17 silly cache afterAdd ux-buildKit@0.1.0
+18 verbose afterAdd /Users/johncionci/.npm/ux-buildKit/0.1.0/package/package.json not in flight; writing
+19 verbose correctMkdir /Users/johncionci/.npm correctMkdir not in flight; initializing
+20 verbose afterAdd /Users/johncionci/.npm/ux-buildKit/0.1.0/package/package.json written
+21 silly publish { name: 'ux-buildKit',
+21 silly publish   version: '0.1.0',
+21 silly publish   description: 'Front-end build tools for custom Drupal theme.',
+21 silly publish   repository:
+21 silly publish    { type: 'git',
+21 silly publish      url: 'git+https://github.com/oomphinc/oomph-ux-buildkit.git' },
+21 silly publish   dependencies: { bootstrap: '^4.0.0' },
+21 silly publish   devDependencies:
+21 silly publish    { 'babel-core': '^6.26.0',
+21 silly publish      'babel-preset-es2015': '^6.24.1',
+21 silly publish      del: '^3.0.0',
+21 silly publish      eslint: '^4.13.1',
+21 silly publish      'eslint-config-airbnb': '^16.1.0',
+21 silly publish      'eslint-plugin-import': '^2.8.0',
+21 silly publish      'eslint-plugin-jsx-a11y': '^6.0.3',
+21 silly publish      'eslint-plugin-react': '^7.5.1',
+21 silly publish      gulp: '3.9.x',
+21 silly publish      'gulp-autoprefixer': '^4.0.0',
+21 silly publish      'gulp-babel': '^7.0.0',
+21 silly publish      'gulp-clean-css': '^3.9.0',
+21 silly publish      'gulp-eslint': '^4.0.0',
+21 silly publish      'gulp-load-plugins': '^1.5.0',
+21 silly publish      'gulp-parker': '0.1.4',
+21 silly publish      'gulp-plumber': '1.1.0',
+21 silly publish      'gulp-rename': '1.2.x',
+21 silly publish      'gulp-sass': '^3.1.0',
+21 silly publish      'gulp-sass-glob': '^1.0.8',
+21 silly publish      'gulp-sass-lint': '^1.3.4',
+21 silly publish      'gulp-size': '2.1.x',
+21 silly publish      'gulp-sourcemaps': '^2.6.2',
+21 silly publish      'gulp-stylelint': '^5.0.0',
+21 silly publish      'gulp-uglify': '^3.0.0',
+21 silly publish      'gulp-util': '^3.0.8',
+21 silly publish      'gulp-watch': '^4.3.11',
+21 silly publish      'node-sass': '^4.6.1',
+21 silly publish      'node-sass-import-once': '1.2.x',
+21 silly publish      pa11y: 'beta',
+21 silly publish      'run-sequence': '^2.2.0',
+21 silly publish      stylelint: '^8.4.0',
+21 silly publish      'stylelint-config-recommended-scss': '^3.0.0',
+21 silly publish      'stylelint-no-browser-hacks': '^1.1.0',
+21 silly publish      'stylelint-selector-bem-pattern': '^2.0.0',
+21 silly publish      'stylelint-config-sass-guidelines': '^4.0.1',
+21 silly publish      'stylelint-scss': '^2.2.0',
+21 silly publish      'stylelint-order': '^0.8.0' },
+21 silly publish   engines: { node: '8.9.x' },
+21 silly publish   '//': 'The postinstall script is needed to work-around this Drupal core bug: https://www.drupal.org/node/2329453',
+21 silly publish   scripts:
+21 silly publish    { postinstall: 'find node_modules/ -name \'*.info\' -type f -delete',
+21 silly publish      'install-tools': 'npm install',
+21 silly publish      'uninstall-tools': 'rm -r node_modules;',
+21 silly publish      build: 'gulp',
+21 silly publish      'build:dev': 'gulp build:dev',
+21 silly publish      serve: 'gulp serve',
+21 silly publish      watch: 'gulp watch' },
+21 silly publish   readme: '# oomph-ux-buildkit\nThe buildkit is platform idependant, we should be able to include it on all our\nDrupal and WordPress projects.\n\nAll tests are run on the precommit hook but can be overidden using a --noverify flag (not yet)\n\n## Requirements\n* Node 8.9+\ncheck out nvm...\nfor accessibility testing tht needs some configuartion and added to a task,\nor can be added as a seperate task\ngulp buld tasks vs lint/test tasks\nadd copy tasks\n\n## Tools\n### Stylelint\nunder the hood for scss testing we use stylelint, styles are broken up into 3\nmajor categories:\n* Possible Errors,\n* Limit Language Features\n* Stylistic Issues\nmore can be found here: stylelint link.\n\n## Linting\nLinting tests can be run using NPM Scripts. If you are not fimialr with this\nconcept please take time to review it. NPM Scripts allows us to have one set of\nwrapper scripts that we can interchangeably use should we ever decide to move\nto another tool.\n\nSee the main gulpfile.js for a full list of tests that can be run.\n\n### Scss\nThe two main factors behind linting our files are 1, for consistency 2, for readability.\nWe use the recommened guidelines from [sass-guidelines](sass-guidelin.es) as well\nas a few others to maintain this philosophy.\n\nAnother benefit is automation, we should not spending time repeating tasks that\ncan be automated, such as code reviews. Code reviews can offer vailble feedback\nbest on the vest practices and the viability of our code but reviewers should not\nhave to worry about the granular details of things like indentation - this is\nwhat linters are for!\n\n## Roadmap\n* accessibility testing\n* sass doc - all our stuff should be formated to create auto documentation\n* kss - living styleguide builder\n* lighthouse - automated performance testing\n* basic html/css testing (browser compat)\n* precommit testings\n* add travis\n\nhttps://www.npmjs.com/package/pre-commit\nhttps://www.npmjs.com/package/pre-push\nhttps://www.npmjs.com/package/copy\n\n## Issues\nhttps://thinkoomph.jira.com/projects/OUXE\n',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   gitHead: '0b18ba323c97b978903c774a767c8bf75e8732e1',
+21 silly publish   bugs: { url: 'https://github.com/oomphinc/oomph-ux-buildkit/issues' },
+21 silly publish   homepage: 'https://github.com/oomphinc/oomph-ux-buildkit#readme',
+21 silly publish   _id: 'ux-buildKit@0.1.0',
+21 silly publish   _shasum: 'c950ba054387f62c116c1b30c4665a9d500041f3',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name ux-buildKit
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'ux-buildKit',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   escapedName: 'ux-buildKit',
+26 silly mapToRegistry   name: 'ux-buildKit',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri https://registry.npmjs.org/ux-buildKit
+28 verbose publish registryBase https://registry.npmjs.org/
+29 silly publish uploading /Users/johncionci/.npm/ux-buildKit/0.1.0/package.tgz
+30 verbose request uri https://registry.npmjs.org/ux-buildKit
+31 verbose request sending authorization for write operation
+32 info attempt registry request try #1 at 8:10:50 PM
+33 verbose request using bearer token for auth
+34 verbose request id 23bbcdb346bdbf11
+35 http request PUT https://registry.npmjs.org/ux-buildKit
+36 http 400 https://registry.npmjs.org/ux-buildKit
+37 verbose headers { 'content-type': 'application/json',
+37 verbose headers   'cache-control': 'max-age=300',
+37 verbose headers   'content-length': '55',
+37 verbose headers   'accept-ranges': 'bytes',
+37 verbose headers   date: 'Tue, 10 Apr 2018 00:10:52 GMT',
+37 verbose headers   via: '1.1 varnish',
+37 verbose headers   connection: 'keep-alive',
+37 verbose headers   'x-served-by': 'cache-ewr18138-EWR',
+37 verbose headers   'x-cache': 'MISS',
+37 verbose headers   'x-cache-hits': '0',
+37 verbose headers   'x-timer': 'S1523319052.686681,VS0,VE692',
+37 verbose headers   vary: 'Accept-Encoding, Accept' }
+38 verbose request invalidating /Users/johncionci/.npm/registry.npmjs.org/ux-buildKit on PUT
+39 error publish Failed PUT 400
+40 verbose stack Error: "ux-buildKit" is invalid for new packages : ux-buildKit
+40 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:302:12)
+40 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:290:14)
+40 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
+40 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:187:22)
+40 verbose stack     at emitTwo (events.js:106:13)
+40 verbose stack     at Request.emit (events.js:191:7)
+40 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1048:10)
+40 verbose stack     at emitOne (events.js:96:13)
+40 verbose stack     at Request.emit (events.js:188:7)
+40 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:969:12)
+41 verbose statusCode 400
+42 verbose pkgid ux-buildKit
+43 verbose cwd /Users/johncionci/Sites/oomph-ux-buildkit
+44 error Darwin 16.7.0
+45 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+46 error node v6.10.3
+47 error npm  v3.10.10
+48 error code E400
+49 error "ux-buildKit" is invalid for new packages : ux-buildKit
+50 error If you need help, you may report this error at:
+50 error     <https://github.com/npm/npm/issues>
+51 verbose exit [ 1, true ]
