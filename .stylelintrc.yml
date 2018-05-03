@@ -18,6 +18,7 @@
   ],
   "rules": {
     "order/properties-alphabetical-order": null,
+    "max-nesting-depth": 4,
     "number-leading-zero": [
       "never",
       { "severity": "warning" }
