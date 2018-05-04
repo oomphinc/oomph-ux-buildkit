@@ -2,32 +2,202 @@
 # The main focus here is readability & consistency
 # most rules dont matter too much.
 
-{
-  "extends": [
-    "stylelint-config-recommended-scss",
-    "stylelint-config-sass-guidelines",
-  ],
-  "plugins": [
-    "stylelint-order",
-    "stylelint-scss"
-  ],
-  "ignoreFiles": [
-    "node_modules/**/*.css",
-    "css/**/*.css",
-    "sass/vendor/**/*.scss"
-  ],
-  "rules": {
-    "order/properties-alphabetical-order": null,
-    "number-leading-zero": [
-      "never",
-      { "severity": "warning" }
-    ],
-    "rule-empty-line-before": [
-      "always-multi-line",
-      {
-        "except": ["first-nested"],
-        "ignore": ["after-comment"]
-      }
-    ],
-  },
-}
+#no eq rules are flagged
+# @todo revisit order
+
+# Settings
+
+# Additional Plugins
+plugins:
+ stylelint-order
+ stylelint-scss
+
+# Ignore these file paths
+ignoreFiles:
+ node_modules/**/*.css
+ css/**/*.css
+ sass/vendor/**/*.scss
+
+# Default severity of all linters.
+severity: error
+
+# Rules
+linters:
+
+  # BangFormat:
+  declaration-bang-space-after: never
+  declaration-bang-space-before: always
+
+  # BorderZero:
+  declaration-property-value-blacklist:
+    border: ['0']
+    border-top: ['0']
+    border-right: ['0']
+    border-bottom: ['0']
+    border-left: ['0']
+    border: ['none']
+    border-top: ['none']
+    border-right: ['none']
+    border-bottom: ['none']
+    border-left: ['none']
+
+  # ColorKeyword:
+  color-named: never
+
+  # DebugStatement:
+  at-rule-blacklist: ['debug']
+
+  # DecalrationOrder:
+  order/order:
+      custom-properties
+      dollar-variables
+      declarations
+      rules
+      at-rules
+  order/properties-order: null
+  order/properties-alphabetical-order: null
+
+  # EmptyRule:
+  block-no-empty: true
+
+  # FinalNewline:
+  no-missing-end-of-source-newline: true
+
+  # HexLength:
+  color-hex-length: short
+
+  # HexNotation:
+  color-hex-case: lower
+
+  # HexValidation:
+  color-no-invalid-hex: true
+
+  # ImportPath:
+  scss/at-import-no-partial-leading-underscore: true
+  scss/at-import-partial-extension-blacklist: ['scss']
+
+  # Indentation
+  indentation: 2
+
+  # LeadingZero:
+  number-leading-zero: always
+
+  # NameFormat:
+  scss/at-function-pattern: "^[a-z]+([a-z0-9-]+[a-z0-9]+)?$"
+  scss/at-mixin-pattern: "^[a-z]+([a-z0-9-]+[a-z0-9]+)?$"
+  scss/dollar-variable-pattern: "^[_]?[a-z]+([a-z0-9-]+[a-z0-9]+)?$"
+
+  # NestingDepth:
+  max-nesting-depth: 3
+    ignore: blockless-at-rules
+    ignoreAtRules:
+        include
+        media
+        supports
+
+  # PlaceholderInExtend:
+  scss/at-extend-no-missing-placeholder: true
+
+  # PropertySpelling:
+  property-no-unknown: true
+
+  # PseudoElement:
+  selector-pseudo-element-colon-notation: double
+  selector-pseudo-element-no-unknown: true
+
+  # QualifyingElement:
+  selector-no-qualifying-type: true
+
+  # SingleLinePerSelector:
+  selector-list-comma-newline-after: always
+
+  # SelectorDepth:
+  selector-max-compound-selectors: 3
+
+  # Shorthand:
+  shorthand-property-no-redundant-values: true
+
+  # SingleLinePerProperty:
+  declaration-block-semicolon-newline-after: always
+  declaration-block-single-line-max-declarations: 1
+
+  # SpaceAfterComma:
+  function-comma-space-after: always-single-line
+
+  # SpaceAfterPropertyColon:
+  declaration-colon-space-after: always-single-line
+
+  # SpaceAfterPropertyName:
+  declaration-colon-space-before: never
+
+  # SpaceAfterVariableColon:
+  scss/dollar-variable-colon-space-after: always
+
+  # SpaceAfterVariableName:
+  scss/dollar-variable-colon-space-before: never
+
+  # SpaceBeforeBrace:
+  block-opening-brace-space-before: always
+
+  # SpaceBetweenParens:
+  function-parentheses-space-inside: never
+
+  # StringQuotes
+  string-quotes: single
+
+  # TrailingSemicolon:
+  declaration-block-trailing-semicolon: always
+  declaration-block-semicolon-space-before: never
+
+  # TrailingZero:
+  #UnnecessaryMantissa:
+  number-no-trailing-zeros: true
+
+  # UnnecessaryParentReference:
+  scss/selector-no-redundant-nesting-selector: true
+
+  # UrlQuotes:
+  function-url-quotes: always
+
+  # VendorPrefix:
+  at-rule-no-vendor-prefix: true
+  media-feature-name-no-vendor-prefix: true
+  property-no-vendor-prefix: true
+  selector-no-vendor-prefix: true
+  value-no-vendor-prefix: true
+
+  # ZeroUnit:
+  length-zero-no-unit: true
+
+  # No Equivalent Rule(s)
+  at-rule-no-unknown: null
+  media-feature-parentheses-space-inside: never
+
+  rule-empty-line-before:
+    always-multi-line
+      except: first-nested
+      ignore: after-comment
+
+  scss/at-rule-no-unknown: true
+  scss/percent-placeholder-pattern: "^[a-z]+([a-z0-9-]+[a-z0-9]+)?$"
+  selector-class-pattern: [
+    "^[a-z0-9\\-]+$",
+    {
+      "message:
+        "Selector should be written in lowercase with hyphens (selector-class-pattern)"
+    }
+  ]
+  selector-max-id: 0
+
+
+
+
+
+
+
+
+
+
+
+
+
